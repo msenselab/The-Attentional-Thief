@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "The Attentional Thief: analysis code and derived data"
+abstract: >-
+  Analysis code, experiment program, and derived data for a study of how
+  self-paced visual exploration compresses subjective time while enhancing
+  visual encoding, combining behavioral, eye-tracking, ERP, and
+  fixation-related potential (FRP) measures.
+type: software
+authors:
+  - family-names: TODO_FAMILY
+    given-names: TODO_GIVEN
+    # affiliation: TODO
+    # orcid: https://orcid.org/TODO
+# Optional: reference the associated paper
+# preferred-citation:
+#   type: article
+#   title: "TODO Title"
+#   authors:
+#     - family-names: TODO_FAMILY
+#       given-names: TODO_GIVEN
+#   journal: "TODO"
+#   year: TODO
+#   doi: "TODO"
+license: MIT
+repository-code: "https://github.com/msenselab/The-Attentional-Thief"
+keywords:
+  - subjective time
+  - visual attention
+  - EEG
+  - ERP
+  - fixation-related potentials
+  - eye tracking

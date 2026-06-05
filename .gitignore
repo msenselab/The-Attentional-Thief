@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Raw / large data — never commit to the public repo
+data/raw/
+data/sub-*/
+data/Sub*/
+derivatives/
+*.fif
+*.eeg
+*.h5
+*.npy
+*.set
+*.fdt
+*.edf
+*.asc
+
+# Stimulus images (not redistributed; copyright)
+experiment/stimuli/
+stimuli/
