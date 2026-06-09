@@ -3,14 +3,10 @@
 **Self-paced visual exploration compresses subjective time while enhancing visual encoding.**
 
 This repository contains the analysis code, experiment program, and derived
-(intermediate) data needed to reproduce the results and figures of the study.
-Raw EEG and eye-tracking recordings are **not** included (size and participant
-privacy); the pipeline is designed so that all reported statistics and figures
-can be regenerated from the derived data provided here.
-
-> ℹ️ **Placeholders to fill in before going public:** authors, paper title,
-> journal/preprint DOI, and the BibTeX entry below. Search this file and
-> `CITATION.cff` for `TODO`.
+(intermediate) data needed to reproduce the reported statistical results of the
+study. Raw EEG and eye-tracking recordings are **not** included (size and
+participant privacy); the public reproduction path starts from the derived data
+provided here.
 
 ---
 
@@ -53,9 +49,9 @@ sample is defined in `code/analysis/config.py`.
 ├── code/
 │   ├── preprocessing/      # raw → derived (requires raw data; provided for transparency)
 │   ├── analysis/           # repro_*.py run from derived data; 05-09 are full pipeline
-│   └── figures/            # derived → manuscript figures (TODO)
+│   └── figures/            # Notes on figure-generation limits in this release
 ├── experiment/             # PsychoPy experiment program (stimuli images not included)
-├── figures/                # Rendered manuscript figures (outputs of code/figures)
+├── figures/                # Notes on manuscript figure availability
 └── docs/                   # Pipeline documentation
 ```
 
@@ -80,8 +76,9 @@ reference tables in `data/derived/<measure>/reference/`.
 | Script | Reproduces | Status |
 |--------|------------|--------|
 | `code/analysis/repro_behavioral.py` | Subjective-time RM-ANOVA, post-hoc, descriptives | ✅ verified |
-| `code/analysis/repro_erp.py` | ERP cluster-amplitude condition contrasts | ⏳ TODO |
-| `code/analysis/repro_frp.py` | FRP cluster-amplitude condition contrasts | ⏳ TODO |
+| `code/analysis/repro_erp.py` | ERP cluster-amplitude condition contrasts | ✅ verified |
+| `code/analysis/repro_frp.py` | FRP cluster-amplitude condition contrasts | ✅ verified |
+| `code/analysis/repro_eyetracking.py` | Eye-tracking descriptives | ✅ verified |
 
 **Provenance / full pipeline.** The numbered scripts in `code/preprocessing/`
 (`01`–`04`) and `code/analysis/` (`05`–`09`) document the complete pipeline from
@@ -89,11 +86,14 @@ raw EEG/eye-tracking to the derived data. They require the raw dataset (not
 shipped) and are included for transparency, not for the from-derived
 reproduction.
 
-> ⏳ **Not yet derived-runnable:** grand-average ERP/FRP *waveform* and *topomap*
-> figures need time × channel evoked data, which is not yet exported as CSV.
-> To fully close the figure-reproduction gap, export per-condition group
-> evokeds (e.g. as long-format CSV) from the raw pipeline and add figure
-> scripts under `code/figures/`.
+> **Figure note:** the derived-data reproduction scripts verify the reported
+> behavioral, ERP, FRP, and eye-tracking statistics. Grand-average ERP/FRP
+> waveform and topomap figure generation requires time × channel evoked data,
+> which is not redistributed in this release.
+
+The experiment program under `experiment/` requires a PsychoPy/EyeLink-capable
+runtime and the stimulus image set, which are not part of the locked analysis
+environment above.
 
 ---
 
@@ -125,15 +125,15 @@ scripts must reproduce.
 
 If you use this code or data, please cite:
 
-> TODO Authors (YEAR). *TODO Title*. TODO Journal/Preprint. DOI: TODO
+> Msense Lab contributors (2026). *The Attentional Thief: analysis code and derived data*. GitHub. https://github.com/msenselab/The-Attentional-Thief
 
 ```bibtex
-@article{TODO_citekey,
-  title   = {TODO Title},
-  author  = {TODO Authors},
-  journal = {TODO},
-  year    = {TODO},
-  doi     = {TODO}
+@misc{msenselab_attentional_thief_2026,
+  title        = {The Attentional Thief: analysis code and derived data},
+  author       = {{Msense Lab contributors}},
+  year         = {2026},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/msenselab/The-Attentional-Thief}
 }
 ```
 

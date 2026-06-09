@@ -8,22 +8,10 @@ abstract: >-
   fixation-related potential (FRP) measures.
 type: software
 authors:
-  - family-names: TODO_FAMILY
-    given-names: TODO_GIVEN
-    # affiliation: TODO
-    # orcid: https://orcid.org/TODO
-# Optional: reference the associated paper
-# preferred-citation:
-#   type: article
-#   title: "TODO Title"
-#   authors:
-#     - family-names: TODO_FAMILY
-#       given-names: TODO_GIVEN
-#   journal: "TODO"
-#   year: TODO
-#   doi: "TODO"
+  - name: "Msense Lab contributors"
 license: MIT
 repository-code: "https://github.com/msenselab/The-Attentional-Thief"
+date-released: "2026-06-05"
 keywords:
   - subjective time
   - visual attention
